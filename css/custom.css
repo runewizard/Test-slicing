@@ -1,0 +1,125 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+}
+body {
+    font: 11px  Arial, "Times New Roman", Times, serif;
+    color: #999;
+    text-align: justify;
+    background: url(../img/main_bg.jpg) no-repeat;
+    background-size: cover;
+    -webkit-transform-style: preserve-3d;
+        -ms-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+    padding: 0 100px;
+    min-width: 300px;
+    background-attachment: fixed;
+}
+main {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.articles-wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+.article-block {
+    width: 30%;
+    min-height: 300px;
+    padding: 20px;
+    background: #fff;
+    margin-left: 5%;
+}
+.article-block:first-child {
+    margin-left: 0;
+}
+.article-block,
+.article-block img {
+    transition: all ease .3s;
+}
+.article-block img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+.star-rating {
+    font-size: 0;
+    margin-top: 10px;
+    text-align: center;
+}
+.star-block {
+    display: inline-block;
+    font-size: 10px;
+}
+.star-icon {
+    float: right;
+    padding-left: 2px;
+    cursor: pointer;
+    color: #000;
+}
+.star-icon:first-child {
+    padding-left: 0;
+}
+.star-input {
+    display: none;
+}
+.star-icon:hover:before,
+.star-icon:hover ~ .star-icon:before,
+.star-input:checked ~ .star-icon:before {
+    content: "\f005";
+}
+.article-block h3 {
+    color: #333;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1200px) {
+    .articles-wrap {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width : 900px) {
+    .article-block {
+        width: 45%;
+        margin-left: 10%;
+    }
+    .third-article {
+        clear: both;
+        width: 100%;
+        margin: 10% 0 0;
+    }
+}
+
+@media only screen and (max-width : 620px) {
+    .article-block {
+        width: 100%;
+        margin: 10% 0 0;
+    }
+}
+
+@media only screen and (min-width : 400px) {
+    .article-block {
+        float: left;
+    }
+}
